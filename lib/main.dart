@@ -44,9 +44,12 @@ class _RandomWordsState extends State<RandomWords> {
           _suggestions.addAll(generateWordPairs().take(10));
         }
         return ListTile(
-          title: Text(
-            _suggestions[index].asPascalCase,
-            style: _biggerFont,
+          title: Transform.rotate(
+            angle: 0.1,
+            child: Text(
+              _suggestions[index].asPascalCase,
+              style: _biggerFont,
+            ),
           ),
         );
       },
